@@ -1,6 +1,3 @@
-It looks like you have a Python script that retrieves data from an SQLite database and then uses the Plotly library to create a plot of close prices for a specific expiry date. If you want to provide documentation for your script, you can create a `README.md` file to explain how to use the script and any other relevant information. Here's an example of what your `README.md` file might look like:
-
-```markdown
 # Option Price Visualization
 
 This Python script retrieves option price data from an SQLite database and creates a Plotly graph to visualize close prices for a specific expiry date.
