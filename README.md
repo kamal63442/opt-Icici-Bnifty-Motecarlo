@@ -1,50 +1,43 @@
-# Option Price Visualization
+# Notebook Name: `analyze_option_data.ipynb`
 
-This Python script retrieves option price data from an SQLite database and creates a Plotly graph to visualize close prices for a specific expiry date.
+## Overview
 
-## Prerequisites
+This Jupyter Notebook performs the following tasks:
 
-Before running the script, make sure you have the following dependencies installed:
-
-- Python 3.x
-- pandas
-- plotly
-- sqlite3
-
-You can install the required Python packages using the following command:
-
-```bash
-pip install pandas plotly
-```
+1. Connects to an SQLite database (`option_history.db`).
+2. Retrieves data from multiple tables in the database and organizes it into a dictionary of Pandas DataFrames (`option_price_df`).
+3. Displays information about the retrieved data, including the number of keys, columns, and indices for each DataFrame.
+4. Uses Plotly to create a line plot of close prices for a specific expiry date (`19-JAN-2023`).
 
 ## Usage
 
-1. Clone the repository:
+1. Ensure that you have the required Python libraries installed:
 
-```bash
-git clone https://github.com/yourusername/option-price-visualization.git
-cd option-price-visualization
-```
+    ```bash
+    pip install pandas plotly sqlite3
+    ```
 
-2. Ensure your SQLite database file (`option_history.db`) is in the same directory as the script.
+2. Run the Jupyter Notebook (`analyze_option_data.ipynb`).
 
-3. Run the script:
+3. View the output, which includes information about the database, DataFrame contents, and a Plotly plot.
 
-```bash
-python your_script_name.py
-```
+## Files
 
-4. The script will output information about the data in the database, including the total number of keys and details for each key.
+- `option_history.db`: SQLite database containing option data.
+- `analyze_option_data.ipynb`: Jupyter Notebook script for analyzing and visualizing option data.
+- `read.md`: This README file.
 
-5. After processing the data, the script will generate a Plotly graph showing close prices for a specified expiry date (`19-JAN-2023` in this example).
+## Dependencies
 
-## Additional Information
+- Python 3.x
+- Pandas
+- Plotly
+- SQLite3
 
-- The script uses the `get_from_database` function to retrieve data from the SQLite database.
-- The Plotly library is employed to create an interactive line plot of close prices for the specified expiry date.
-- The x-axis is assumed to be categorical (date) data.
+## Notes
 
-Feel free to customize the script to fit your specific needs or modify the `expiry_date_to_plot` variable to visualize data for a different expiry date.
-```
+- Make sure to update the `expiry_date_to_plot` variable if you want to analyze a different expiry date.
 
-Remember to replace "yourusername" and "your_script_name.py" with your actual GitHub username and the name of your Python script. Additionally, you can provide more details or instructions based on your specific requirements.
+---
+
+Copy and paste this template into a `read.md` file in the same directory as your Jupyter Notebook. Feel free to customize it further based on your specific needs and details about the data and analysis in your notebook.
